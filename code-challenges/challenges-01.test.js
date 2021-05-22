@@ -57,11 +57,11 @@ describe('Testing challenge 3', () => {
 
 const allUpperCase = (arr) => {
   // Solution code here...
-  let newArr = [];
+  let newArr3 = [];
   arr.forEach(val=>{
-    newArr.push(val)
+    newArr3.push(val.toUpperCase())
   })
-  return newArr.toUpperCase();
+  return newArr3
 };
 
 
@@ -115,11 +115,17 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
 };
+addNumbers(8, [], 5, addValues);
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -141,6 +147,21 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+    let newArr6 = [];
+    availableItems = [
+      { name: 'apples', available: true },
+      { name: 'pears', available: true },
+      { name: 'oranges', available: false },
+      { name: 'bananas', available: true },
+      { name: 'blueberries', available: false }
+    ];
+  
+    availableItems.forEach(item => {
+      if (item.available) {
+        newArr6.push(item.name);
+      }
+    });
+    return newArr6;
 };
 
 /* ------------------------------------------------------------------------------------------------
