@@ -156,10 +156,11 @@ expect(reversedString('Code 301')).toStrictEqual('103 edoC');
 const reversedString = (str) => {
   // Solution code here...
   let newArr6=[]; 
+  let
   newArr6= str.split('').reduce((acc, val) => {
     acc = val + acc; 
     return acc; 
-   },"");
+   },'');
   return newArr6
 
 
