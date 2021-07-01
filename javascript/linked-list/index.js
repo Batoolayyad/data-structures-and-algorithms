@@ -11,29 +11,39 @@ class LinkedList {
         this.head = null;
     }
     insert(value) {
-        let node = new Node(value);
-        if (!this.head) {
-            this.head = node;
-        } else {
-            node.next = this.head;
-            this.head = node;
+        try{
+
+            let node = new Node(value);
+            if (!this.head) {
+                this.head = node;
+            } else {
+                node.next = this.head;
+                this.head = node;
+            }
+        }catch(error){
+            console.error(error)
         }
     }
     includes(value) {
-        let current = this.head;
-        if (!this.head) {
+        try{
+
+            let current = this.head;
+            if (!this.head) {
+                return false;
+            }
+            while (current.next) {
+                if (current.value == value) {
+                    return true;
+                }
+                current = current.next;
+                if ((current.next == null) && (value == current.value)) {
+                    return true;
+                }
+            }
             return false;
+        }catch(error){
+            console.error(error)
         }
-        while (current.next) {
-            if (current.value == value) {
-                return true;
-            }
-            current = current.next;
-            if ((current.next == null) && (value == current.value)) {
-                return true;
-            }
-        }
-        return false;
     }
     toString() {
         let result = '';

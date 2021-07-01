@@ -15,7 +15,7 @@ describe('checks if it includes a value',()=>{
     expect(ll.head.value).toBe('*');
     ll.insert('a');
     ll.insert('b');
-    ll.insert('c'); 
+    ll.insert(''); 
   })
   test('Will return true when finding a value within the linked list that exists',()=>{
     const ll = new LinkedLilst();
