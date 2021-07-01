@@ -21,7 +21,8 @@ class LinkedList {
                 this.head = node;
             }
         }catch(error){
-            console.error(error)
+            if (value==undefined)
+            console.error('insert a value of un undifined ',error)
         }
     }
     includes(value) {
@@ -42,7 +43,8 @@ class LinkedList {
             }
             return false;
         }catch(error){
-            console.error(error)
+            if(value==undefined)
+            console.log('insert a value of undifined ',error)
         }
     }
     toString() {
