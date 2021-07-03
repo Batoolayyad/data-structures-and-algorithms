@@ -21,44 +21,42 @@ class LinkedList {
                 this.head = node;
             }
         }catch(error){
-            if (value==undefined)
-            console.error('insert a value of un undifined ',error)
+            console.log('insert a value of un undifined ')
         }
     }
     includes(value) {
         try{
 
-            let current = this.head;
+            let currentNode = this.head;
             if (!this.head) {
                 return false;
             }
-            while (current.next) {
-                if (current.value == value) {
+            while (currentNode.next) {
+                if (currentNode.value == value) {
                     return true;
                 }
-                current = current.next;
-                if ((current.next == null) && (value == current.value)) {
+                currentNode = currentNode.next;
+                if ((currentNode.next == null) && (value == currentNode.value)) {
                     return true;
                 }
             }
             return false;
         }catch(error){
-            if(value==undefined)
-            console.log('insert a value of undifined ',error)
+            console.log('insert a value of undifined ')
         }
     }
     toString() {
         let result = '';
-        let current = this.head;
-        while (current.next) {
-            if (current.value == null) {
+        let currentNode = this.head;
+        while (currentNode.next) {
+            if (currentNode.value == null) {
                 result = result + `NULL -> `;
             } else {
-                result = result + `{${current.value}} -> `;
+                result = result + `{${currentNode.value}} -> `;
             }
-            current = current.next;
-            if (current.next == null) {
-                result = result + `{${current.value}}`;
+            currentNode = currentNode.next;
+            if (currentNode.next == null) {
+                result = result + `{${currentNode.value}}`;
             }
         }
         return result;
