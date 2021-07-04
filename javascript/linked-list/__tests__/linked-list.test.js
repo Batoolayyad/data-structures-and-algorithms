@@ -38,4 +38,56 @@ describe('checks if it includes a value',()=>{
     ll.insert('a');
     expect(ll.toString()).toBe('{a} -> NULL -> {b}');
   })
+
+
+  test('Can successfully add a node to the end of the linked list',()=>{
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('*');
+    expect(ll.head.next.value).toBe('*');
+  });
+  test('Can successfully add multiple nodes to the end of a linked list',()=>{
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    expect(ll.head.next.next.next.value).toBe('d');
+  });
+  test('Can successfully insert a node before a node located i the middle of a linked list',()=>{
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertBefore('*','c');
+    expect(ll.head.next.next.value).toBe('*');
+  })
+  test('Can successfully insert a node before the first node of a linked list',()=>{
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertBefore('*','a');
+    expect(ll.head.value).toBe('*');
+  })
+  test('Can successfully insert after a node in the middle of the linked list',()=>{
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('*','c');
+    expect(ll.head.next.next.next.value).toBe('*');
+  })
+  test('Can successfully insert a node after the last node of the linked list',()=>{
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('*','d');
+    expect(ll.head.next.next.next.next.value).toBe('*');
+  })
 });

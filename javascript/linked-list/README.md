@@ -20,9 +20,17 @@ creat **Singly Linked List** that:
 #### Approach
 
 1- read the instruction carefully.
+
+
 2- trying have clear understanding for the concept before starting.
+
+
 3- start writing the code after having clear vision of what I should do.
+
+
 4- go throw each test and try different cases to make sure it will pass.  
+
+
 
 #### Efficiency
 
@@ -35,8 +43,32 @@ Big O:
 
 
 1- insert: Adds a new node with a value to the head of the list with an O(1) Time performance.
+
+
 2- includes: Indicates whether a value exists as a Node’s value somewhere within the list.
+
+
 3- to string: Returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
+
+
+4- append: adds a new node with the given value to the end of the list.
+
+
+5- insert before: adds a new node with the given new value immediately before the first node that has the value 
+specified.
+
+
+6- insert after: adds a new node with the given new value immediately after the first node that has the value specified.
+
+
+## whiteboard:
+
+
+### code challenge(6):
+
+
+![whiteboard6](./whiteboard6.PNG)
+
 
 
