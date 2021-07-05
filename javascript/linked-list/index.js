@@ -9,9 +9,11 @@ class Node {
 class LinkedList {
     constructor() {
         this.head = null;
+        this.counter=0;
     }
     insert(value) {
         try{
+            this.counter=this.counter+1
 
             let node = new Node(value);
             if (!this.head) {
@@ -62,6 +64,7 @@ class LinkedList {
         return result;
     }
     append(value) {
+        this.counter=this.counter+1
         const node = new Node(value);
         if (!this.head) {
           this.head = node;
@@ -74,6 +77,7 @@ class LinkedList {
         }
     }
     insertBefore(insertValue,ref){
+        this.counter=this.counter+1
       let node=new Node(insertValue);
       let currentNode=this.head;
       if(ref==this.head.value){
@@ -91,6 +95,7 @@ class LinkedList {
     }
   }
       insertAfter(insertValue,ref){
+        this.counter=this.counter+1
         let node=new Node(insertValue);
         let currentNode=this.head;
         while(currentNode){
@@ -102,6 +107,20 @@ class LinkedList {
           currentNode=currentNode.next;
         }
     }
+        kthFromEnd(k) {
+            let currentNode = this.head;
+            let secCounter = 1;
+            if (k >= this.counter || k < 0) {
+                return 'Exception';
+            }
+            while (currentNode) {
+                if (secCounter == this.counter - k) {
+                    return currentNode.value;
+                }
+                secCounter = secCounter + 1;
+                currentNode = currentNode.next;
+            }
+        }
 }
 
 module.exports = LinkedList;
