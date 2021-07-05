@@ -90,6 +90,46 @@ describe('checks if it includes a value',()=>{
     ll.insertAfter('*','d');
     expect(ll.head.next.next.next.next.value).toBe('*');
   })
+  test('Where k is greater than the length of the linked list', () => {
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('*', 'd');
+    expect(ll.kthFromEnd(10)).toBe('Exception');
+  })
+  test('Where k and the length of the list are the same', () => {
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('*', 'd');
+    expect(ll.kthFromEnd(5)).toBe('Exception');
+  })
+  test('Where k is not a positive integer', () => {
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('*', 'd');
+    expect(ll.kthFromEnd(-1)).toBe('Exception');
+  })
+  test('Where the linked list is of a size 1', () => {
+    const ll = new LinkedLilst();
+    ll.append('*');
+    expect(ll.kthFromEnd(0)).toBe('*');
+  });
+  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const ll = new LinkedLilst();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    expect(ll.kthFromEnd(2)).toBe('b');
+  });
 });
 
 
