@@ -27,6 +27,10 @@ kth from end
 - Return the node’s value that is k places from the tail of the linked list.
 - You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
 
+### part (3):
+
+Write a function called zip lists that takes two list and marge them together
+
 
 ## Approach & Efficiency
 
@@ -64,7 +68,7 @@ Big O:
 3- to string: Returns a string representing all the values in the Linked List, formatted as:
 "{ a } -> { b } -> { c } -> NULL"
 
-
+#### code challenge(6):
 4- append: adds a new node with the given value to the end of the list.
 
 
@@ -74,8 +78,21 @@ specified.
 
 6- insert after: adds a new node with the given new value immediately after the first node that has the value specified.
 
+#### code challenge(7):
+
 
 7- create a function that take a k-th value and return the node value for the k-th from the end of a linked list.
+
+
+#### code challenge(8):
+
+8-  Write a function called zip lists that takes two list and marge them together like the example below:
+
+- zipLists(list1, list2)
+list1= head -> [1] -> [3] -> [2] -> X ,
+list2=head -> [5] -> [9] -> [4] -> X
+
+- output= head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X
 
 ## whiteboard:
 
@@ -90,5 +107,10 @@ specified.
 
 
 ![whightboard7](./whightboard7.PNG)
+
+
+### code challenge(8):
+
+![whightboard8](./whightboard8.PNG)
 
 
