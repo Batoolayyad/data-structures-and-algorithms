@@ -122,5 +122,21 @@ class LinkedList {
             }
         }
 }
+function zipLists(ll1,ll2){
+    let l1 = ll1.head;
+    let l2 = ll2.head;
+    let ll3 = new LinkedList();
+    while(l1 || l2){
+        if(l1!=null){
+            ll3.append(l1.value);
+            l1=l1.next;
+        }
+      if(l2!=null){
+          ll3.append(l2.value); 
+          l2=l2.next; 
+      }
+    }
+    return ll3.toString();
+  }
 
-module.exports = LinkedList;
+module.exports = {LinkedList, zipLists}
