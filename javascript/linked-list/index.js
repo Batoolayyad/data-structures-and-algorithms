@@ -10,6 +10,7 @@ class LinkedList {
     constructor() {
         this.head = null;
         this.counter=0;
+        this.last=null;
     }
     insert(value) {
         try{
