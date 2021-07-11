@@ -7,9 +7,9 @@ class Node {
 }
 
 class Stack {
-    constructor(linkedList) {
-        this.size = linkedList;
-        this.top=this.size.head;
+    constructor() {
+        
+        this.top=null;
     }
     push(value) {
         try {
@@ -61,10 +61,9 @@ class Stack {
 
 
 class Queue{
-    constructor(LinkedList){
-        this.size=LinkedList;
-        this.top=this.size.head;
-        this.last=this.size.last;
+    constructor(){
+        this.top=null;
+        this.last=null;
     }
     enqueue(value) {
         try {
@@ -111,7 +110,30 @@ class Queue{
         }  
     }
 }
+class PseudoQueue{
+    constructor()
+    {
+        this.stack1 = new Stack();
+        this.stack2 = new Stack();
+    }
+    enqueue(value){
+        while (this.stack1.top){
+            this.stack2.push(this.stack1.pop());
+        }
+        this.stack1.push(value);
+        while (this.stack2.top){
+            this.stack1.push(this.stack2.pop());
+       }
+    }
+    dequeue(){
+        if (!this.stack1.top){
+            return "exception";
+        }
+        return this.stack1.pop();
+    }
+}
 module.exports={
     Stack,
     Queue,
+    PseudoQueue,
 }
