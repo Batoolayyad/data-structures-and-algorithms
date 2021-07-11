@@ -35,3 +35,34 @@ Using a **Linked List** as the underlying data storage mechanism, implement both
 and raise exception when called on empty stack
 * **isEmpty()**: Returns Value of the node located at the top of the stack and raise exception when called on empty stack
 * **peek()**: Returns Boolean indicating whether or not the stack is empty.
+
+
+
+
+# Challenge(11):
+#### Implement a Queue using two Stacks.
+
+### Feature Tasks
+#### Create a new class called pseudo queue. this PseudoQueue class will implement our standard queue interface (the two methods listed below), Internally, utilize 2 Stack instances to create and manage the queue
+##### Methods:
+###### enqueue**
+- Arguments: value
+- Inserts value into the PseudoQueue, using a first-in, first-out approach.
+###### dequeue
+- Arguments: none
+- Extracts a value from the PseudoQueue, using a first-in, first-out approach
+
+# Approach & Efficiency
+- Efficiency :**bigO(1)**
+- Approach: follow all the instructions, and after finish the code do the required tests.
+
+# API
+* **push()**:adds a new node with that value to the top of the stack with an O(1) Time performance.
+* **pop()**: 1- Returns the value from node from the top of the stack, Removes the node from the top of the stack
+and raise exception when called on empty stack
+* **isEmpty()**: Returns Value of the node located at the top of the stack and raise exception when called on empty stack
+* **peek()**: Returns Boolean indicating whether or not the stack is empty.
+
+### whiteboard:
+
+![whiteboard11](./UML-lab11.PNG)
