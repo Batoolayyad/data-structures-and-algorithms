@@ -30,12 +30,12 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  let newArr2 =[];
-   newArr2=arr.reduce((acc, val) => {
-    acc = acc + val;
-    return acc;
-  }, 0)
-  return newArr2;
+  // let newArr2 =[];
+  //  newArr2=arr.reduce((acc, val) => {
+  //   acc = acc + val;
+  //   return acc;
+  // }, 0)
+  // return newArr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,12 +52,12 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  let newArr3=[]
-   newArr3=arr.reduce((acc,val)=>{
-   acc = acc + val.purchasePrice;
-   return acc;
-  },0)
-  return newArr3;
+  // let newArr3=[]
+  //  newArr3=arr.reduce((acc,val)=>{
+  //  acc = acc + val.purchasePrice;
+  //  return acc;
+  // },0)
+  // return newArr3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,11 +70,11 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  let newArr4 = [];
-  newArr4=arr.reduce((acc, val, i) => {
-  return i + 1;
-  }, 0)
-  return newArr4
+  // let newArr4 = [];
+  // newArr4=arr.reduce((acc, val, i) => {
+  // return i + 1;
+  // }, 0)
+  // return newArr4
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,12 +135,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  let newArr5 = [];
-   arr.reduce((acc, val) => {
-  newArr5.push(acc = val.name)
-  },[])
+  // let newArr5 = [];
+  //  arr.reduce((acc, val) => {
+  // newArr5.push(acc = val.name)
+  // },[])
 
-  return newArr5
+  // return newArr5
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,13 +155,13 @@ expect(reversedString('Code 301')).toStrictEqual('103 edoC');
 
 const reversedString = (str) => {
   // Solution code here...
-  let newArr6=[]; 
-  let
-  newArr6= str.split('').reduce((acc, val) => {
-    acc = val + acc; 
-    return acc; 
-   },'');
-  return newArr6
+  // let newArr6=[]; 
+  // let
+  // newArr6= str.split('').reduce((acc, val) => {
+  //   acc = val + acc; 
+  //   return acc; 
+  //  },'');
+  // return newArr6
 
 
 };
@@ -239,14 +239,14 @@ Write a function named countPrimeNumbers that, given an array elements as input,
 You are welcome to use the provided isPrime function.
 ------------------------------------------------------------------------------------------------ */
 
-const isPrime = (value) => {
-  for (let i = 2; i < value; i++) {
-    if (value % i === 0) {
-      return false;
-    }
-  }
-  return value > 1;
-};
+// const isPrime = (value) => {
+//   for (let i = 2; i < value; i++) {
+//     if (value % i === 0) {
+//       return false;
+//     }
+//   }
+//   return value > 1;
+// };
 
 const countPrimeNumbers = (arr) => {
   // Solution code here...
@@ -329,7 +329,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
@@ -337,27 +337,27 @@ describe('Testing challenge 2', () => {
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   test('It should add the purchase price', () => {
     expect(addPurchases([{item: 'switch', purchasePrice: 399}, {item: 'toothpaste', purchasePrice: 2}])).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
   });
 });
 
-describe('Testing challenge 4', () => {
+xdescribe('Testing challenge 4', () => {
   test('It should return the length of the array', () => {
     expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
 
-describe('Testing challenge 5', () => {
+xdescribe('Testing challenge 5', () => {
   test('It should return an array continaing the names of the characters', () => {
     expect(returnNames(starWarsData)).toStrictEqual([ 'Luke Skywalker', 'C-3PO', 'R2-D2', 'Darth Vader', 'Leia Organa' ]);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
 
-describe('Testing challenge 6', () => {
+xdescribe('Testing challenge 6', () => {
   test('It should return the string with the characters in reverse order', () => {
     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
