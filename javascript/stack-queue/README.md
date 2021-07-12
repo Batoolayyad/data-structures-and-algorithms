@@ -40,9 +40,14 @@ and raise exception when called on empty stack
 
 
 # Challenge(11):
+
+
 #### Implement a Queue using two Stacks.
 
+
 ### Feature Tasks
+
+
 #### Create a new class called pseudo queue. this PseudoQueue class will implement our standard queue interface (the two methods listed below), Internally, utilize 2 Stack instances to create and manage the queue
 ##### Methods:
 ###### enqueue**
@@ -66,3 +71,35 @@ and raise exception when called on empty stack
 ### whiteboard:
 
 ![whiteboard11](./UML-lab11.PNG)
+
+
+# Challenge(12):
+
+
+#### First-in, First out Animal Shelter.
+
+
+### Feature Tasks
+
+
+##### Create a class called AnimalShelter which holds only dogs and cats.
+##### The shelter operates using a first-in, first-out approach.
+##### Implement the following methods:
+- enqueue:
+Arguments: animal
+animal can be either a dog or a cat object.
+- dequeue
+Arguments: pref
+pref can be either "dog" or "cat"
+##### Return: either a dog or a cat, based on preference.
+- If pref is not "dog" or "cat" then return null.
+
+# Approach & Efficiency
+- Efficiency :**bigO(1)**
+- Approach: follow all the instructions, and after finish the code do the required tests.
+
+
+### whiteboard:
+
+![whiteboard12](./whiteboard12.PNG)
+

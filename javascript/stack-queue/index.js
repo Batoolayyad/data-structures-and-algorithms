@@ -132,8 +132,38 @@ class PseudoQueue{
         return this.stack1.pop();
     }
 }
+class AnimalShelter {
+    constructor() {
+        this.top = null;
+        this.last = null;
+    }
+    enqueue(value) {
+            if (value != "dog" && value != "cat") {
+                return "can be either a dog or a cat object";
+            }
+            let node = new Node(value);
+            if (!this.top) {
+                this.top = node;
+                this.last = node;
+            } else {
+                this.last.next = node;
+                this.last = node;
+         }
+    }
+    dequeue() {
+            if (!this.top) {
+                throw new Error('exception');}
+            let temp = this.top;
+            this.top = temp.next;
+            temp.next = null;
+            return temp.value;
+        }
+    }
+
+
 module.exports={
     Stack,
     Queue,
     PseudoQueue,
+    AnimalShelter,
 }
