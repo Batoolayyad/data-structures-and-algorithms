@@ -173,8 +173,7 @@ class AnimalShelter {
             }else if(IdxOfBrackets%2==0) {
                 stack.push(IdxOfBrackets+1)
             }else if(stack.pop()!=IdxOfBrackets){
-                return false;
-                
+                return false; 
             }
         }
         return stack.isEmpty()
