@@ -152,13 +152,34 @@ class AnimalShelter {
     }
     dequeue() {
             if (!this.top) {
-                throw new Error('exception');}
+                throw new Error('exception');
+            }
             let temp = this.top;
             this.top = temp.next;
             temp.next = null;
             return temp.value;
         }
+        
     }
+
+    function validaterBrackets(value){
+        let refBrackets="(){}[]";
+        let stack=new Stack();
+        for (let i=0;i<value.length;i++){
+            let IdxOfBrackets=refBrackets.indexOf(value[i]);
+            
+            if (IdxOfBrackets==-1){
+                continue;
+            }else if(IdxOfBrackets%2==0) {
+                stack.push(IdxOfBrackets+1)
+            }else if(stack.pop()!=IdxOfBrackets){
+                return false;
+                
+            }
+        }
+        return stack.isEmpty()
+    }
+
 
 
 module.exports={
@@ -166,4 +187,5 @@ module.exports={
     Queue,
     PseudoQueue,
     AnimalShelter,
+    validaterBrackets
 }
