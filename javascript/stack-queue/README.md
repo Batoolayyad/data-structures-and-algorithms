@@ -103,3 +103,40 @@ pref can be either "dog" or "cat"
 
 ![whiteboard12](./whiteboard12.PNG)
 
+
+# Challenge(13):
+
+#### Multi-bracket Validation.
+
+use the concept for stack  FILO to compere a string that has a brackets and see if they are balenced or not 
+### Feature Tasks
+##### Write a function called validate brackets
+
+- Arguments: string
+- Return: boolean
+- representing whether or not the brackets in the string are balanced
+#### There are 3 types of brackets:
+
+- Round Brackets : ()
+- Square Brackets : []
+- Curly Brackets : {}
+### example:
+- {}	                    TRUE
+- {}(){}	                TRUE
+- ()[[Extra Characters]]	TRUE
+- (){}[[]]                 	TRUE
+- {}{Code}[Fellows](())	    TRUE
+- [({}]	                    FALSE
+- (](	                    FALSE
+- {(})                   	FALSE
+
+## Approach & Efficiency
+- Efficiency :**bigO(n)**
+- Approach: follow all the instructions, and after finish the code do the required tests.
+ I search for multible sources to help in this challange 
+
+### White Baored
+
+![whiteboard13](./whiteboard13.PNG)
+
+ 
