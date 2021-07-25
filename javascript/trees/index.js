@@ -41,6 +41,22 @@ class BinaryTree {
     _traverse(this.root);
     return result;
   }
+
+  findMax(){
+    if(!this.root){
+      return 'not found'
+    }
+    let maxValue=this.root.value;
+    const _traverse =(node)=>{
+      if(node.value>=maxValue){
+        maxValue = node.value
+      }
+      if(node.left) _traverse(node.left);
+      if(node.right)_traverse(node.right);
+    }
+    _traverse(this.root);
+    return maxValue;
+  }
 }
 class BinarySearchTree extends BinaryTree{
   constructor(root){
@@ -82,6 +98,8 @@ search(value){
  }
 
   }
+
+
 }
 
 
