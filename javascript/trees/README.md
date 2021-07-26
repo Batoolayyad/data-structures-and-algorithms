@@ -46,3 +46,17 @@
 
 ![whiteboard16](./whiteboard16.PNG)
 
+
+## Code challenge(17): 
+
+#### Feature Tasks
+- Write a function called breadth first
+- Arguments: tree
+- Return: list of all values in the tree, in the order they were encountered
+
+
+### URL
+
+![whiteboard17](./whiteboard17.PNG)
+
+
