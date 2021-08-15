@@ -89,3 +89,21 @@ Therefore, almost all hash table implementations have some collision resolution 
 - Returns: Index in the collection for that key
 
 
+
+# Challenge (31)
+Problem Find the first repeated word in a book.
+
+
+## Feature Tasks
+#### Write a function called repeated word that finds the first word to occur more than once in a string
+#### Arguments: string
+#### Return: string
+
+## Make tests
+#### empty string
+#### no reapte words
+#### return the first reapeted words
+
+
+## white board
+![whightWord31](whightWord31.PNG)
