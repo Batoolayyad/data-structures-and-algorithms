@@ -79,9 +79,26 @@ class Node {
     }
 }
 
+function repeatedword(str){
+
+  let hashmap = new Hashmap(4000);
+  let key = str.toLowerCase().split(',').join('').split(' ');
+  
+  for(let i=0;i<key.length;i++){
+    if(hashmap.contains(key[i])){
+        return key[i];
+    }else{
+        hashmap.add(key[i]);
+         }
+    }
+    return null;
+ }
+
+
 
   module.exports={
       Node,
       LinkedList,
-      Hashmap
+      Hashmap,
+      repeatedword
   }

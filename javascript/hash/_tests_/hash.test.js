@@ -1,6 +1,7 @@
 const Hashmap= require('../hash').Hashmap;
 const node= require('../hash').Node;
 const LinkedList= require('../hash').LinkedList;
+const repeatedword=require('../hash').repeatedword;
 
 describe('Hashmap tests',()=>{
     let newHash= new Hashmap(4000);
@@ -39,3 +40,17 @@ describe('Hashmap tests',()=>{
 
     
 });
+describe('repeated word',()=>{
+    it('return the repeated word',()=>{
+        let str = "Once upon a time, there was a brave princess who...";
+        expect(repeatedword(str)).toBe('a');
+    })
+    it('test empty string',()=>{
+        let str = '';
+        expect(repeatedword(str)).toBe(null);
+    })
+    it('test if no reapted words',()=>{
+        let str = 'Once upon time, there was brave princess who...';
+        expect(repeatedword(str)).toBe(null);
+    })
+})
