@@ -18,7 +18,7 @@ class Node {
         this.head = node;
       }
     }
-    value(key){
+    values(key){
         let node = this.head;
         let value=[];
         while(node){
@@ -48,7 +48,7 @@ class Node {
     add(key, value) {
       // get an index
       const hash = this.hash(key);
-      console.log('Key', hash);
+      //console.log('Key', hash);
       // we need to check if a value already exist in the index
       if (!this.storage[hash]) {
         const ll = new LinkedList();
@@ -63,7 +63,7 @@ class Node {
     get(key) {
       let hash= this.hash(key);
       if (this.storage[hash]){
-          return this.storage[hash].value(key);
+          return this.storage[hash].values(key);
       }else{
           return null
       }
@@ -96,9 +96,10 @@ function repeatedword(str){
 
 
 
+
   module.exports={
       Node,
       LinkedList,
       Hashmap,
-      repeatedword
+      repeatedword  
   }
