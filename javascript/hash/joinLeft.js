@@ -86,17 +86,17 @@ class Hashmap {
 
 
 
-function leftJoin(map1, map2) {
+function leftJoin(hashmap1, hashmap2) {
 
   let table1 = [];
-  for (let i = 0; i < map1.storage.length; i++) {
+  for (let i = 0; i < hashmap1.storage.length; i++) {
     let table2 = [];
-    if (map1.storage[i] !== undefined) {
-      let key = (Object.keys(map1.storage[i].head.value)[0]);
+    if (hashmap1.storage[i] !== undefined) {
+      let key = (Object.keys(hashmap1.storage[i].head.value)[0]);
       table2.push(key);
-      table2.push(map1.storage[i].head.value[key]);
-      if (map2.contains(key)) {
-        table2.push(map2.get(key));
+      table2.push(hashmap1.storage[i].head.value[key]);
+      if (hashmap2.contains(key)) {
+        table2.push(hashmap2.get(key));
       } else {
         table2.push(null);
       }
