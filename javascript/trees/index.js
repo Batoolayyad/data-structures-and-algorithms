@@ -123,6 +123,25 @@ class BinarySearchTree extends BinaryTree {
     return resultArr;
   }
 
+  function treeIn(tree1, tree2) {
+
+    let arr1 = tree1.preOrder();
+    let arr2 = tree2.preOrder();
+  
+    let ans = [];
+  
+    for (let i = 0; i < arr1.length; i++) {
+  
+      if (arr2.includes(arr1[i])) {
+        ans.push(arr1[i]);
+      }
+  
+    }
+  
+    return ans;
+    
+  }
+  
 
 
 
@@ -131,4 +150,5 @@ module.exports = {
   BinarySearchTree,
   Node,
   breadthFirst,
+  treeIn
 }
