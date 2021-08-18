@@ -1,83 +1,10 @@
-// const BinaryTree = require('../index').BinaryTree;
-// const Node = require('../index').Node;
-//  const BinarySearchTree=require('../index').BinarySearchTree
-
-// describe('Binary Tree', () => {
-//   let tree;
-//   beforeAll(() => {
-    // const one = new Node(1);
-    // const two = new Node(2);
-    // const three = new Node(3);
-    // const four = new Node(4);
-    // const five = new Node(5);
-    // const six = new Node(6);
-    // const seven = new Node(7);
-    // const eight = new Node(8);
-    // const nine = new Node(9);
-    // one.left = two;
-    // one.right = three;
-    // two.left = six;
-    // three.left = four;
-    // three.right = five;
-    // six.right = seven;
-    // seven.left = eight;
-    // seven.right = nine;
-    // tree = new BinaryTree(one);
-//  tree = new BinarySearchTree();
-// tree.add(10);
-//  tree.add(15);
-//  tree.add(5);
-//  tree.add(7);
-//  tree.add(20);
-//  tree.add(13);
-//  tree.add(12);
-//  tree.add(3);
-//  tree.add(1);
-//  tree.inOrder();
-// JSON.Stringify(tree)
-
-// tree.search(12)
-
-//   });
-  // root - left - right
-//   it('Can successfully instantiate an empty tree', () => {
-    // let expectedArr = [1, 3, 5, 7, 10, 12, 13, 15, 20];
-//     tree = new BinarySearchTree();
-// tree.add(10);
-//     let  expectedArr=[10]
-//     expect(tree.inOrder()).toEqual(expectedArr);
-//   });
-//   it('Can successfully instantiate an empty tree', () => {
-//     // let expectedArr = [1, 3, 5, 7, 10, 12, 13, 15, 20];
-//     tree = new BinarySearchTree();
-// tree.add(10);
-//     let  expectedArr=[10]
-//     expect(tree.inOrder()).toEqual(expectedArr);
-//   });
-//   it('Can successfully instantiate a tree with a single root node', () => {
-    // let expectedArr = [1, 3, 5, 7, 10, 12, 13, 15, 20];
-//      const one = new Node(10);
-//     tree = new BinarySearchTree();
-// tree.add(15);
-//     let expectedArr=[10,15]
-//     expect(tree.inOrder()).toEqual(expectedArr);
-//   });
-  // left - root - right
-//   it('inorder', () => {
-//     let expected = [6, 8, 7, 9, 2, 1, 4, 3, 5];
-//     expect(tree.inOrder()).toEqual(expected);
-//   });
-  // left - right -root
-//   it('postorder', () => {
-//     let expected = [8, 9, 7, 6, 2, 4, 5, 3, 1];
-//     expect(tree.postOrder()).toEqual(expected);
-//   });
-// });
-
 
 const Node = require('../index').Node;
 const BinaryTree = require('../index').BinaryTree;
- const BinarySearchTree = require('../index').BinarySearchTree;
+const BinarySearchTree = require('../index').BinarySearchTree;
+const treeIn= require('../index').treeIn;
+
+
 describe('Binary Tree',()=>{
     test('Can successfully instantiate an empty tree',()=>{
         let tree = new BinaryTree();
@@ -130,5 +57,73 @@ describe('Binary Tree',()=>{
         tree.add(13);
         tree.add(33);
         expect(tree.postOrder()).toEqual([13,9,7,33,20]);
+    })
+});
+
+
+describe('Trees Intersection', () => {
+
+    test('get the nodes that has the same valuse in the two trees', () => {
+
+        let root1 = new BinarySearchTree();
+        let root2 = new BinarySearchTree();
+
+        root1.add(0);
+        root1.add(1);
+        root1.add(2);
+        root1.add(3);
+        root1.add(4);
+        root1.add(5);
+    
+        root2.add(0);
+        root2.add(3);
+        root2.add(4);
+        root2.add(5);
+        root2.add(2);
+        root2.add(10);
+
+        expect(treeIn(root1, root2)).toEqual([0, 2, 3, 4, 5]);
+    })
+
+    
+    test('get all the nodes values when both trees are the same', () => {
+
+        let root1 = new BinarySearchTree();
+        let root2 = new BinarySearchTree();
+
+        root1.add(0);
+        root1.add(1);
+        root1.add(2);
+        root1.add(3);
+        root1.add(4);
+        
+        root2.add(0);
+        root2.add(1);
+        root2.add(2);
+        root2.add(3);
+        root2.add(4);
+       
+        expect(treeIn(root1, root2)).toEqual([0, 1, 2, 3, 4]);
+    })
+
+
+    test('return empty array when there is no intersection', () => {
+
+        let root1 = new BinarySearchTree();
+        let root2 = new BinarySearchTree();
+
+        root1.add(0);
+        root1.add(1);
+        root1.add(2);
+        root1.add(3);
+        root1.add(4);
+        
+        root2.add(5);
+        root2.add(6);
+        root2.add(7);
+        root2.add(8);
+        root2.add(9);
+        
+        expect(treeIn(root1, root2)).toEqual([]);
     })
 })

@@ -110,6 +110,21 @@ Problem Find the first repeated word in a book.
 
 
 
+## Code Challenge 32:
+
+#### Find common values in 2 binary trees.
+
+
+### Feature Tasks
+Find all values found to be in 2 binary trees
+
+- Write a function called tree intersection
+- Arguments: two binary trees
+- Return: array
+
+
+## white board
+![white-board-31](white-board-31.PNG)
 
 
 
@@ -131,6 +146,10 @@ Problem Find the first repeated word in a book.
 
 ## white board
 ![whightBaord33](whightBaord33.PNG)
+
+
+
+
 
 
 
